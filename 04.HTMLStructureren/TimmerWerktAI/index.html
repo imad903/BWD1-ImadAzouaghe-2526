@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact | TimmerWerktAI</title>
+</head>
+
+<body>
+
+   <!-- HEADER: Logo en hoofdnavigatie -->
+   <header>
+      <img src="img/logo.png" alt="TimmerWerktAI logo">
+      
+      <!-- NAVIGATIE: Hoofdmenu -->
+      <nav>
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wat.html">Wat</a></li>
+            <li><a href="hoe.html">Hoe</a></li>
+            <li><a href="over.html">Over</a></li>
+            <li><a href="contact.html">Contact</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <!-- MAIN: Hoofdinhoud van de pagina -->
+   <main>
+
+      <!-- SECTION: Page header -->
+      <section class="page-header">
+         <h1>Contacteer TimmerWerktAI</h1>
+         <p>Heb je vragen over onze diensten of wil je een offerte aanvragen? Vul het contactformulier in en we nemen zo snel mogelijk contact met je op.</p>
+      </section>
+
+      <!-- SECTION: Contactformulier -->
+      <section class="contact-form">
+         <h2>Stuur ons een bericht</h2>
+         
+         <form action="process-contact.php" method="post">
+            
+            <div class="form-row">
+               <div class="form-group">
+                  <label for="voornaam">Voornaam *</label>
+                  <input type="text" id="voornaam" name="voornaam" placeholder="Jan" required>
+               </div>
+
+               <div class="form-group">
+                  <label for="achternaam">Achternaam *</label>
+                  <input type="text" id="achternaam" name="achternaam" placeholder="Janssen" required>
+               </div>
+            </div>
+
+            <div class="form-row">
+               <div class="form-group">
+                  <label for="email">E-mailadres *</label>
+                  <input type="email" id="email" name="email" placeholder="jan.janssen@email.nl" required>
+               </div>
+
+               <div class="form-group">
+                  <label for="telefoon">Telefoonnummer</label>
+                  <input type="tel" id="telefoon" name="telefoon" placeholder="+31 6 1234 5678">
+               </div>
+            </div>
+
+            <div class="form-group">
+               <label for="bedrijf">Bedrijfsnaam</label>
+               <input type="text" id="bedrijf" name="bedrijf" placeholder="Jouw bedrijf (optioneel)">
+            </div>
+
+            <div class="form-group">
+               <label for="onderwerp">Onderwerp *</label>
+               <select id="onderwerp" name="onderwerp" required>
+                  <option value="">Selecteer een onderwerp</option>
+                  <option value="offerte">Offerte aanvragen</option>
+                  <option value="vraag">Algemene vraag</option>
+                  <option value="afspraak">Afspraak maken</option>
+                  <option value="samenwerking">Samenwerking</option>
+                  <option value="anders">Anders</option>
+               </select>
+            </div>
+
+            <div class="form-group">
+               <label for="projecttype">Type project</label>
+               <select id="projecttype" name="projecttype">
+                  <option value="">Selecteer projecttype</option>
+                  <option value="keuken">Keuken</option>
+                  <option value="interieur">Interieur op maat</option>
+                  <option value="trap">Trap</option>
+                  <option value="kantoor">Kantoorinrichting</option>
+                  <option value="renovatie">Renovatie</option>
+                  <option value="anders">Anders</option>
+               </select>
+            </div>
+
+            <div class="form-group">
+               <label for="bericht">Jouw bericht *</label>
+               <textarea id="bericht" name="bericht" rows="6" placeholder="Vertel ons meer over jouw project of vraag..." required></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+               <input type="checkbox" id="nieuwsbrief" name="nieuwsbrief" value="ja">
+               <label for="nieuwsbrief">Ja, ik wil graag de nieuwsbrief ontvangen met tips en inspiratie</label>
+            </div>
+
+            <div class="form-group checkbox-group">
+               <input type="checkbox" id="privacy" name="privacy" value="akkoord" required>
+               <label for="privacy">Ik ga akkoord met de <a href="privacy.html">privacyverklaring</a> *</label>
+            </div>
+
+            <div class="form-actions">
+               <button type="submit">Verstuur bericht</button>
+               <button type="reset">Reset formulier</button>
+            </div>
+
+         </form>
+
+         <p class="form-note"><small>* Verplichte velden</small></p>
+      </section>
+
+      <!-- SECTION: Contactinformatie en kaart -->
+      <section class="contact-details">
+         <h2>Bezoek ons</h2>
+         
+         <div class="details-grid">
+            <article class="detail-item">
+               <h3>Adres</h3>
+               <p>
+                  TimmerWerktAI<br>
+                  Houtstraat 123<br>
+                  1234 AB Amsterdam<br>
+                  Nederland
+               </p>
+            </article>
+
+            <article class="detail-item">
+               <h3>Telefoon</h3>
+               <p><a href="tel:+31201234567">+31 20 123 45 67</a></p>
+            </article>
+
+            <article class="detail-item">
+               <h3>E-mail</h3>
+               <p><a href="mailto:info@timmerwerktai.nl">info@timmerwerktai.nl</a></p>
+            </article>
+
+            <article class="detail-item">
+               <h3>Openingstijden</h3>
+               <p>
+                  Maandag - Vrijdag: 08:00 - 17:00<br>
+                  Zaterdag: Op afspraak<br>
+                  Zondag: Gesloten
+               </p>
+            </article>
+         </div>
+
+         <!-- Google Maps embed -->
+         <div class="map-container">
+            <h3>Vind ons op de kaart</h3>
+            <iframe 
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.7179!2d4.8952!3d52.3702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDIyJzEyLjciTiA0wrA1Myc0Mi43IkU!5e0!3m2!1snl!2snl!4v1234567890" 
+               width="100%" 
+               height="450" 
+               style="border:0;" 
+               allowfullscreen="" 
+               loading="lazy" 
+               referrerpolicy="no-referrer-when-downgrade"
+               title="Locatie TimmerWerktAI in Amsterdam">
+            </iframe>
+         </div>
+      </section>
+
+      <!-- SECTION: Waarom ons contacteren -->
+      <section class="why-contact">
+         <h2>Waarom contact opnemen?</h2>
+         
+         <article>
+            <h3>Gratis adviesgesprek</h3>
+            <p>We bieden een vrijblijvend gesprek waarin we jouw wensen bespreken en advies geven over de mogelijkheden.</p>
+         </article>
+
+         <article>
+            <h3>Offerte op maat</h3>
+            <p>Na het kennismakingsgesprek maken we een gedetailleerde offerte die perfect aansluit bij jouw project en budget.</p>
+         </article>
+
+         <article>
+            <h3>Snelle reactietijd</h3>
+            <p>We streven ernaar om binnen 24 uur te reageren op alle contactaanvragen.</p>
+         </article>
+
+         <article>
+            <h3>Persoonlijke aanpak</h3>
+            <p>Elk project is uniek. We luisteren naar jouw verhaal en werken samen aan de beste oplossing.</p>
+         </article>
+      </section>
+
+   </main>
+
+   <!-- FOOTER: Bedrijfsinfo en links -->
+   <footer>
+      <div class="footer-info">
+         <h3>TimmerWerktAI</h3>
+         <p>
+            Houtstraat 123<br>
+            1234 AB Amsterdam<br>
+            Nederland
+         </p>
+         <p>
+            Tel: <a href="tel:+31201234567">+31 20 123 45 67</a><br>
+            Email: <a href="mailto:info@timmerwerktai.nl">info@timmerwerktai.nl</a>
+         </p>
+      </div>
+
+      <div class="footer-nav">
+         <h3>Links</h3>
+         <nav>
+            <ul>
+               <li><a href="wat.html">Wat we doen</a></li>
+               <li><a href="hoe.html">Hoe we werken</a></li>
+               <li><a href="over.html">Over ons</a></li>
+               <li><a href="contact.html">Contact</a></li>
+            </ul>
+         </nav>
+      </div>
+
+      <div class="footer-social">
+         <h3>Volg ons</h3>
+         <ul>
+            <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+            <li><a href="#" aria-label="Instagram">Instagram</a></li>
+            <li><a href="#" aria-label="Facebook">Facebook</a></li>
+         </ul>
+      </div>
+
+      <p class="copyright">&copy; 2025 TimmerWerktAI. Alle rechten voorbehouden.</p>
+   </footer>
+
+</body>
+
+</html>
